@@ -69,6 +69,16 @@ function App() {
         <div style={{ width: '100%' }}>
           <MasonryContainer />
         </div>
+        <p
+          className="text-white text-center mt-8"
+          style={{
+            fontSize: 'clamp(1.25rem, 3vw, 2rem)',
+            fontFamily: 'Great Vibes, cursive',
+            fontWeight: 'bold'
+          }}
+        >
+          I love you so much baby!
+        </p>
       </div>
       <audio autoPlay loop src={backgroundMusic} style={{ display: 'none' }} />
     </div>
