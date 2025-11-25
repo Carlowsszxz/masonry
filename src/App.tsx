@@ -18,7 +18,6 @@ function App() {
         className="relative z-10 flex flex-col items-center text-center"
         style={{
           width: '100%',
-          maxWidth: 720,
           marginLeft: 'auto',
           marginRight: 'auto',
           paddingLeft: 'clamp(16px, 12vw, 160px)',
