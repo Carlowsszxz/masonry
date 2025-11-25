@@ -1,5 +1,6 @@
 import Iridescence from './components/Iridescence';
 import MasonryContainer from './components/MasonryContainer';
+import backgroundMusic from './assets/images/background.mp3';
 import './App.css';
 
 function App() {
@@ -13,7 +14,19 @@ function App() {
           speed={1.0}
         />
       </div>
-      <div className="relative z-10 flex flex-col items-center text-center p-8 max-w-lg mx-auto">
+      <div
+        className="relative z-10 flex flex-col items-center text-center"
+        style={{
+          width: '100%',
+          maxWidth: 720,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: 'clamp(16px, 12vw, 160px)',
+          paddingRight: 'clamp(16px, 12vw, 160px)',
+          paddingTop: 48,
+          paddingBottom: 48
+        }}
+      >
         <div className="bg-black/50 rounded-lg shadow-lg p-6 mb-8">
           <h1
             className="text-white font-extrabold mb-6"
@@ -58,6 +71,7 @@ function App() {
           <MasonryContainer />
         </div>
       </div>
+      <audio autoPlay loop src={backgroundMusic} style={{ display: 'none' }} />
     </div>
   );
 }
