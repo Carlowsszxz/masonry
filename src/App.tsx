@@ -1,6 +1,6 @@
 import Iridescence from './components/Iridescence';
 import MasonryContainer from './components/MasonryContainer';
-import backgroundMusic from './assets/images/background.mp3';
+import backgroundMusic from './assets/images/PXL_20241219_070522463.mp4';
 import './App.css';
 
 function App() {
