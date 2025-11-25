@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "ls -la && ls -la src || true && vite build",
+    "build": "vite build",
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "preview": "vite preview"
