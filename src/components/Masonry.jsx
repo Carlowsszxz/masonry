@@ -125,6 +125,9 @@ const Masonry = ({
   useLayoutEffect(() => {
     if (!imagesReady) return;
 
+    const maxY = Math.max(...grid.map(item => item.y + item.h));
+    containerRef.current.style.height = `${maxY}px`;
+
     grid.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
       const animationProps = {
