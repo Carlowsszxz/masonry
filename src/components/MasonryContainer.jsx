@@ -15,8 +15,15 @@ const sampleItems = images.map((src, i) => ({
 }));
 
 const MasonryContainer = () => {
+  // Select 10 random images from the available images
+  const getRandomImages = (items, count = 10) => {
+    if (items.length <= count) return items;
+    const shuffled = [...items].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  };
+
   // If no images found, fall back to a few placeholders so UI still renders
-  const items = sampleItems.length ? sampleItems : Array.from({ length: 6 }).map((_, i) => ({
+  const items = sampleItems.length ? getRandomImages(sampleItems, 10) : Array.from({ length: 10 }).map((_, i) => ({
     id: `fallback-${i + 1}`,
     img: `https://picsum.photos/seed/fallback-${i + 1}/800/1200`,
     height: 500 + Math.floor(Math.random() * 300),
